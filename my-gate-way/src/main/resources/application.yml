@@ -1,0 +1,31 @@
+server:
+  port: 8301
+
+spring:
+  application:
+    name: my-gate-way
+  cloud:
+    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+      routes:
+        - id: test
+          uri: http://cxytiandi.com
+          predicates:
+            - Path=/course
+        - id: my-client-1
+          uri: lb://my-client-1
+          filters:
+            # 表示转发时去掉第一层路径
+#            - StripPrefix=1
+            # 表示转发时多加一层路径/index
+            - PrefixPath=/index
+          predicates:
+            - Path=/my-client-1/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8101/eureka/
