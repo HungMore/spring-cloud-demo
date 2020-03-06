@@ -29,4 +29,9 @@ public class ApplicationConfigChangeListener {
 - 拦截器和过滤器在spring boot中的区别：[spring boot过滤器、拦截器的区别与使用](https://blog.csdn.net/heweimingming/article/details/79993591)
 
 
+#### 2020.03.06
+
+- xxl-job执行器没有指定调度中心的地址，调度中心直接指定执行器的地址、端口和appName，然后调度中心还是可以成功调度该执行器的任务的。这样是不是有很大的安全漏洞，我只要知道执行器的ip、端口和appName；就可以调度该执行器，或许执行器的xxl.job.accessToken还是很有必要设定一下的吧！但是这个xxl.job.accessToken有什么用呢，怎么把调度中心和执行器绑定起来？
+
+
 
