@@ -41,6 +41,9 @@ public class ApplicationConfigChangeListener {
 
 - 目前还没有发现问题！
 
+#### 2020.03.16
+- centOS配置环境变量出错的时候，可能会导致常用命令都不可用的，解决办法是：[环境变量配置出错弥补方法](https://www.iteye.com/blog/wuneng94zui-2262054)
+- 
 
 
 
